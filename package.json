@@ -1,0 +1,19 @@
+{
+  "name": "lordeckversioncontroller",
+  "version": "1.0.0",
+  "description": "",
+  "main": "ProcessSetsData.js",
+  "dependencies": {
+    "axios": "^0.19.2"
+  },
+  "devDependencies": {
+    "@types/jest": "^25.2.1",
+    "@types/node": "^13.13.5",
+    "jest": "^26.0.1"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC"
+}
