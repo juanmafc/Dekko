@@ -43,6 +43,9 @@ yarn.lock
 #LoR assets
 set1-lite-en_us/*
 set2-lite-en_us/*
+set1-lite-en_us.zip
+set2-lite-en_us.zip
 
 #Javascript
-js/*
+*.js
+*.map
