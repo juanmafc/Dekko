@@ -47,5 +47,5 @@ set1-lite-en_us.zip
 set2-lite-en_us.zip
 
 #Javascript
-*.js
+js/*.js
 *.map
