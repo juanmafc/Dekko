@@ -1,9 +1,10 @@
-import axios from 'axios';
 import { FileUtils } from './FileUtils';
 import { PositionalRectangles,Rectangle } from './PositionalRectangles';
+import { ActiveDeck } from './ActiveDeck';
 import { Card as LoRSetCard} from './LoRSet'
 import { Deck, Card } from './Deck'
 import {CardChanges, getCardChanges} from './CardChanges'
+import { LoRAPI } from './LoRAPI'
 
 
 
@@ -15,7 +16,7 @@ function rectangleIsADeckCard(rectangle:any) {
 }
 
 async function getDeckCardsRectangles(): Promise<Rectangle[]> {
-    const response: PositionalRectangles = (await axios.get<PositionalRectangles>('http://localhost:21337/positional-rectangles')).data;
+    const response: PositionalRectangles = await LoRAPI.getPositionalRectangles();
     const cardRectangles: Rectangle[] = response.Rectangles;
     return cardRectangles.filter( rectangle => rectangleIsADeckCard(rectangle) );    
 }
@@ -46,7 +47,7 @@ async function getCurrentDeck(): Promise<Deck> {
     return new Deck(cards);
 }
 
-
+/*
 async function executeUserOption(dataInput: Object) {
     let option: string = dataInput.toString().trim();    
     if (option == "1"){        
@@ -60,11 +61,26 @@ async function executeUserOption(dataInput: Object) {
     }
 }
 
+
 let stdin = process.openStdin();
 let originalDeck: Deck;
 let modifiedDeck: Deck;
 
 stdin.addListener("data",  executeUserOption );
+*/
+
+/*
+LoRAPI.getActiveDeck().then( activeDeck => {
+    console.log( activeDeck);
+    if (activeDeck.CardsInDeck){
+        if ('02NX010' in activeDeck.CardsInDeck) {
+            console.log( activeDeck.CardsInDeck['02NX010'] )
+        }
+    }
+});
+*/
+
+LoRAPI.getPositionalRectangles().then( rectangles => console.log(rectangles) );
 
 
 
