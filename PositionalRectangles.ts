@@ -1,6 +1,6 @@
 export interface PositionalRectangles {
-    PlayerName?:   string;
-    OpponentName?: string;
+    PlayerName:   string | null;
+    OpponentName: string | null;
     GameState:    string;
     Screen:       Screen;
     Rectangles:   Rectangle[];
