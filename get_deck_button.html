@@ -1,7 +1,16 @@
 <html>
+    
+    <style>
+        .vertical-btn-group button {
+            display: block; /* Make the buttons appear below each other */
+        }
+    </style>
+
     <body>
-        <div class="container">
-            <button class="button" id="getDeckButton">Get Deck</button>
+        <div class="vertical-btn-group">
+            <button class="button" id="setOriginalDeckButton">Set original deck</button>
+            <button class="button" id="setModifiedDeckButton">Set modified deck</button>
+            <button class="button" id="getCardChangesButton">Get card changes</button>
         </div>
         <script>require('./js/renderer.js')</script>
     </body>
