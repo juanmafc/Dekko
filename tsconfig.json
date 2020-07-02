@@ -68,6 +68,7 @@
   "files": [
     "app.ts",
     "FileUtils.ts",
-    "LoRSet.ts"
+    "LoRSet.ts",
+    "main.ts"
   ]
 }
