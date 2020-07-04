@@ -1,8 +1,24 @@
 <html>
-    
+
     <style>
         .vertical-btn-group button {
             display: block; /* Make the buttons appear below each other */
+        }
+
+        /* Create two equal columns that floats next to each other */
+        .column {
+            float: left;
+            width: 50%;
+            padding: 10px;
+            box-sizing: border-box;
+
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
         }
     </style>
 
@@ -12,6 +28,20 @@
             <button class="button" id="setModifiedDeckButton">Set modified deck</button>
             <button class="button" id="getCardChangesButton">Get card changes</button>
         </div>
+
+
+
+        <div class="row" id="CardChangesGroup">
+            <div class="column" id="RemovedCardsColumn" style="background-color:#aaa;">
+                <h2>Removed Cards</h2>                
+            </div>
+            <div class="column"  id="AddedCardsColumn" style="background-color:#bbb;">
+                <h2>Added Cards</h2>                
+            </div>
+        </div>
+
+
         <script>require('./js/renderer.js')</script>
     </body>
+
 </html>
