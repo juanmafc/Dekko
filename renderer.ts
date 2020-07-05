@@ -10,6 +10,17 @@ const app = new Application();
 initializeDeckActionButtons();
 
 function initializeDeckActionButtons() {
+    document.getElementById('startTrackingActiveGameButton')!.addEventListener('click', () => {
+        app.startTrackingActiveDeck((algo: boolean) => {
+            if (algo){
+                document.getElementById('deckIsActiveText')!.innerHTML = 'Deck is active?: TRUE';
+            }
+            else {
+                document.getElementById('deckIsActiveText')!.innerHTML = 'Deck is active?: FALSE';
+            }
+        });
+    })
+
     document.getElementById('setOriginalDeckButton')!.addEventListener('click', () => {
         app.setCurrentDeckAsOriginalDeck();
     })
