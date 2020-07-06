@@ -2,10 +2,15 @@ import { LoRCardRepository } from './LoRCardRepository'
 import { PositionalRectangles,Rectangle } from './PositionalRectangles';
 import { LoRAPI } from './LoRAPI'
 import { Deck, Card } from './Deck'
+import { ActiveDeck } from './ActiveDeck';
 
 export class DeckService {
 
     private lorCardsRepository: LoRCardRepository = new LoRCardRepository(String.raw`C:\Users\juanm\Documents\LoRDeckVersionController\LoRCards.json`);    
+
+    public async getActiveDeck(): Promise<ActiveDeck> {
+        return await LoRAPI.getActiveDeck();
+    } 
 
     public async getCurrentDeck(): Promise<Deck> {
         
