@@ -8,7 +8,8 @@
     "start": "electron ."
   },
   "dependencies": {
-    "axios": "^0.19.2"
+    "axios": "^0.19.2",
+    "fs-extra": "^9.0.1"
   },
   "devDependencies": {
     "@types/jest": "^25.2.1",
@@ -16,6 +17,7 @@
     "electron": "^9.0.0",
     "electron-prebuilt": "^1.4.13",
     "jest": "^26.0.1",
+    "jest-html-reporters": "^2.0.1",
     "nock": "^12.0.3",
     "ts-jest": "^25.5.1",
     "typescript": "^3.8.3"
