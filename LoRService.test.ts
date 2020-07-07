@@ -34,7 +34,7 @@ test('Given a LoRService and an empty active deck, when the tracking of an activ
     lorService.stopTrackingActiveGame();    
 });
 
-test.only('Given a LoRService and an active deck with cards, when the tracking of an active game starts and time passes, then the registered callback should be called with true', async done => {
+test('Given a LoRService and an active deck with cards, when the tracking of an active game starts and time passes, then the registered callback should be called with true', async done => {
     let callback = (isActive: boolean) => {        
         expect(isActive).toBeTruthy();
         done();
