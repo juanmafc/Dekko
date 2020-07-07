@@ -11,8 +11,8 @@ initializeDeckActionButtons();
 
 function initializeDeckActionButtons() {
     document.getElementById('startTrackingActiveGameButton')!.addEventListener('click', () => {
-        app.startTrackingActiveDeck((algo: boolean) => {
-            if (algo){
+        app.startTrackingActiveDeck((gameIsActive: boolean) => {
+            if (gameIsActive){
                 document.getElementById('deckIsActiveText')!.innerHTML = 'Deck is active?: TRUE';
             }
             else {
