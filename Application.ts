@@ -2,6 +2,7 @@ import { Deck } from './Deck'
 import { CardChanges, getCardChanges } from './CardChanges'
 import { DeckService } from './DeckService'
 import { LoRService } from './LoRService'
+import { DeckBuildingMenuSource } from './DeckBuildingMenuSource'
 
 export class Application {
 
@@ -12,11 +13,11 @@ export class Application {
     private lorService: LoRService = new LoRService();
 
     public async setCurrentDeckAsOriginalDeck(): Promise<void> {
-        this.originalDeck = await this.deckService.getCurrentDeck();
+        this.originalDeck = await this.deckService.getCurrentDeckFromMenu(new DeckBuildingMenuSource());
     }
 
     public async setCurrentDeckAsModifiedDeck(): Promise<void> {
-        this.modifiedDeck = await this.deckService.getCurrentDeck();
+        this.modifiedDeck = await this.deckService.getCurrentDeckFromMenu(new DeckBuildingMenuSource());
     }
 
     public getCardChanges(): CardChanges {
@@ -29,4 +30,5 @@ export class Application {
         this.lorService.registerActiveGameCallback(callback);
         this.lorService.startTrackingActiveGame();
     }
+    
 }
