@@ -1,4 +1,4 @@
-import { LoRAPI } from './LoRAPI';
+import { LoRAPI } from '../src/LoRAPI';
 import { ActiveDeckMocks, PositionalRectanglesMocks} from './LoRAPIMocks'
 
 test('Given the LoRAPI, when getting an the active deck outside of a game, an empty deck should be returned', async () => {    

@@ -1,4 +1,4 @@
-import { LoRService } from './LoRService'
+import { LoRService } from '../src/LoRService'
 import { ActiveDeckMocks } from './LoRAPIMocks'
 
 test('Given a LoRService and an empty active deck, when asking if the game is active, false should be returned', async () => {    

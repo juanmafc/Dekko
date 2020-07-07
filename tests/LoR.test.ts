@@ -1,5 +1,5 @@
-import {Deck, Card} from './Deck'
-import {CardChanges, getCardChanges} from './CardChanges'
+import {Deck, Card} from '../src/Deck'
+import {CardChanges, getCardChanges} from '../src/CardChanges'
 
 
 const card0 = new Card("code0", "card0");

@@ -1,10 +1,10 @@
-import { DeckService } from './DeckService';
-import { ActiveDeck } from './ActiveDeck';
+import { DeckService } from '../src/DeckService';
+import { ActiveDeck } from '../src/ActiveDeck';
 import { ActiveDeckMocks, PositionalRectanglesMocks } from './LoRAPIMocks';
-import { Deck, Card } from './Deck';
+import { Deck, Card } from '../src/Deck';
 
-import { DeckBuildingMenuSource } from './DeckBuildingMenuSource';
-import { ActiveGameSource } from './ActiveGameSource'
+import { DeckBuildingMenuSource } from '../src/DeckBuildingMenuSource';
+import { ActiveGameSource } from '../src/ActiveGameSource'
 
 
 

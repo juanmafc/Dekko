@@ -6,6 +6,7 @@ app.on('ready', _=> {
         height: 400,
         width: 400
     });    
+    mainWindow.webContents.openDevTools()
 
     
     let path = `file://${__dirname}/../get_deck_button.html`;    

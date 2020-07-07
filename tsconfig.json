@@ -66,10 +66,10 @@
     "watch": true
   },
   "files": [
-    "app.ts",
-    "FileUtils.ts",
-    "LoRSet.ts",
-    "renderer.ts",
-    "main.ts"    
+    "src/app.ts",
+    "src/FileUtils.ts",
+    "src/LoRSet.ts",
+    "src/renderer.ts",
+    "src/main.ts"    
   ]
 }

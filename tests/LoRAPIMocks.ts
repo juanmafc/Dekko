@@ -1,7 +1,7 @@
 import nock = require('nock');
 
-import { ActiveDeck } from './ActiveDeck';
-import { PositionalRectangles } from './PositionalRectangles';
+import { ActiveDeck } from '../src/ActiveDeck';
+import { PositionalRectangles } from '../src/PositionalRectangles';
 
 
 export namespace ActiveDeckMocks {

@@ -1,5 +1,5 @@
-import { FileUtils } from './FileUtils';
-import { LoRSet, Card } from './LoRSet';
+import { FileUtils } from './src/FileUtils';
+import { LoRSet, Card } from './src/LoRSet';
 
 async function readLoRSetFromFile(path: string): Promise<LoRSet> {
     const cards = await FileUtils.readJsonFromFile<Card[]>(path);
