@@ -23,7 +23,7 @@ test.each`
 `('cartas  en uno, cartas en otro, expected', ( { original, modified, expectedRemovedCards} ) => {
     let cardChanges = getCardsInDeckChanges(original, modified);
     
-    expect(cardChanges.removedCardsInDeck).toEqual(expectedRemovedCards);
+    expect(cardChanges.removedCards).toEqual(expectedRemovedCards);
 });
 
 test.each`
@@ -42,7 +42,7 @@ test.each`
 `('cartas  en uno, cartas en otro, expected', ( { original, modified, expectedAddedCards} ) => {
     let cardChanges = getCardsInDeckChanges(original, modified);
 
-    expect(cardChanges.addedCardsInDeck).toEqual(expectedAddedCards);
+    expect(cardChanges.addedCards).toEqual(expectedAddedCards);
 });
 
 
@@ -57,6 +57,6 @@ test('changes entre decks', () => {
 
     let cardChanges = getCardChanges(deck0, deck1);
 
-    expect(cardChanges.removedCardsInDeck).toEqual([new CardInDeck('card0', 1)]);
-    expect(cardChanges.addedCardsInDeck).toEqual([new CardInDeck('card1', 1)]);
+    expect(cardChanges.removedCards).toEqual([new CardInDeck('card0', 1)]);
+    expect(cardChanges.addedCards).toEqual([new CardInDeck('card1', 1)]);
 });

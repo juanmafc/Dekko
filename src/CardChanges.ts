@@ -17,8 +17,8 @@ class CardsInDeck extends Array<CardInDeck>{
 
 
 export interface CardChanges{
-    removedCardsInDeck:CardInDeck[];
-    addedCardsInDeck:CardInDeck[];
+    removedCards:CardInDeck[];
+    addedCards:CardInDeck[];
 }
 
 export function getCardChanges( originalDeck: Deck, modifiedDeck: Deck ): CardChanges {
@@ -26,12 +26,12 @@ export function getCardChanges( originalDeck: Deck, modifiedDeck: Deck ): CardCh
 }
 
 export function getCardsInDeckChanges(original: CardInDeck[], modified: CardInDeck[]) {
-    let removedCardsInDeck = calculateDeckDifferences(original, modified);
-    let addedCardsInDeck = calculateDeckDifferences(modified, original);
+    let removedCards = calculateDeckDifferences(original, modified);
+    let addedCards = calculateDeckDifferences(modified, original);
 
     return{        
-        removedCardsInDeck:removedCardsInDeck,
-        addedCardsInDeck:addedCardsInDeck
+        removedCards:removedCards,
+        addedCards:addedCards
     }
 }
 

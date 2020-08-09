@@ -35,8 +35,8 @@ function initializeDeckActionButtons() {
 }
 
 function renderCardChanges(changes: CardChanges) {    
-    renderCardsColumn('RemovedCardsColumn', changes.removedCardsInDeck);    
-    renderCardsColumn('AddedCardsColumn', changes.addedCardsInDeck);
+    renderCardsColumn('RemovedCardsColumn', changes.removedCards);    
+    renderCardsColumn('AddedCardsColumn', changes.addedCards);
 }
 
 function renderCardsColumn(columnId: string, cards: CardInDeck[]) {
