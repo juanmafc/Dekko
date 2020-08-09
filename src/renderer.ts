@@ -1,7 +1,7 @@
 import { ipcRenderer } from 'electron'
 import { Application } from './Application'
 import { CardChanges } from './CardChanges'
-import { Card } from './Deck'
+import { CardInDeck } from './Deck'
 
 const ipc = ipcRenderer;
 const app = new Application();
@@ -35,11 +35,11 @@ function initializeDeckActionButtons() {
 }
 
 function renderCardChanges(changes: CardChanges) {    
-    renderCardsColumn('RemovedCardsColumn', changes.removedCards);    
-    renderCardsColumn('AddedCardsColumn', changes.addedCards);            
+    renderCardsColumn('RemovedCardsColumn', changes.removedCardsInDeck);    
+    renderCardsColumn('AddedCardsColumn', changes.addedCardsInDeck);
 }
 
-function renderCardsColumn(columnId: string, cards: Card[]) {
+function renderCardsColumn(columnId: string, cards: CardInDeck[]) {
     let column = document.getElementById(columnId);
     for(let card of cards) {
         let cardElement = document.createElement("p") as HTMLParagraphElement;

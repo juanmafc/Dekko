@@ -1,4 +1,4 @@
-import { Deck, Card, CardInDeck } from './Deck';
+import { Deck, CardInDeck } from './Deck';
 import { LoRCardRepository } from './LoRCardRepository';
 import { PositionalRectangles, Rectangle } from './PositionalRectangles';
 import { LoRAPI } from './LoRAPI'

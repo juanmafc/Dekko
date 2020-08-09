@@ -1,7 +1,7 @@
 import { DeckService } from '../src/DeckService';
 import { ActiveDeck } from '../src/ActiveDeck';
 import { ActiveDeckMocks, PositionalRectanglesMocks } from './LoRAPIMocks';
-import { Deck, Card } from '../src/Deck';
+import { Deck } from '../src/Deck';
 
 import { DeckBuildingMenuSource } from '../src/DeckBuildingMenuSource';
 import { ActiveGameSource } from '../src/ActiveGameSource'
