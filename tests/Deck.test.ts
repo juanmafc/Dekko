@@ -19,7 +19,7 @@ test.each`
     ${ [3] },
     ${ [1, 8] }
     ${ [1, 8, 9, 10, 4, 7] }
-`('cartas diferentes en el mazo, con cantidad dummy para restear nombre: %i', ( {cardAmmounts}: {cardAmmounts: number[]} ) => {
+`('Given these ammounts of different cards $cardAmmounts, when adding them to a Deck, then the Deck should contain those cards with the same ammounts', ( {cardAmmounts}: {cardAmmounts: number[]} ) => {
     let deck = new Deck();    
     let cardsToAdd = createCardsInDeckFromAmmounts(cardAmmounts);
 
