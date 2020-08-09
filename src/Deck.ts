@@ -1,10 +1,18 @@
+
+
+
 export class Deck{    
     
-    constructor(public cards: Card[] ) {}
+    private cardsInDeck: CardInDeck[] = [];    
 
-    public contains(card: Card): boolean {        
-        return this.cards.some( (deckCard:Card) => Card.AreEqual(deckCard, card) );
+    public addCard(card: CardInDeck) {
+        this.cardsInDeck.push(card);
     }
+
+    public getCards(): CardInDeck[] {
+        return this.cardsInDeck; //TODO: a copy should be returned
+    }
+    
 }
 
 export class Card{
@@ -14,4 +22,16 @@ export class Card{
     } 
 
     constructor( public code: string, public name: string) {}
+}
+
+export class CardInDeck {
+
+    static AreEqual(card1: CardInDeck, card2: CardInDeck): boolean {
+        return card1.name === card2.name;
+    } 
+
+    constructor(
+        public name: string,
+        public ammount: number
+    ){};    
 }
