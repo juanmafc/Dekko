@@ -37,7 +37,7 @@ test('DeckService with DeckBuildingMenuSource, empty deck', async () => {
 
     let deck: Deck = await service.getCurrentDeckFromMenu(new DeckBuildingMenuSource());
 
-    expect(deck.cards).toEqual([]);
+    expect(deck.getCards()).toEqual([]);
 });
 
 test('DeckService with DeckBuildingMenuSource, deck with cards', async () => {
@@ -46,7 +46,7 @@ test('DeckService with DeckBuildingMenuSource, deck with cards', async () => {
 
     let deck: Deck = await service.getCurrentDeckFromMenu(new DeckBuildingMenuSource());
 
-    expect(deck.cards.length).toEqual(17);
+    expect(deck.getCards().length).toEqual(17);
 });
 
 
@@ -94,7 +94,7 @@ test('Given a Deck Building Menu deck source and empty positional rectangles, wh
     let deckSource = new DeckBuildingMenuSource()
     let deck: Deck = await deckSource.getCurrentDeck();
 
-    expect(deck.cards).toEqual([]);
+    expect(deck.getCards()).toEqual([]);
 });
 
 test('Given a Deck Building Menu deck source and positional rectangles with cards in deck, when getting the deck, a deck with cards shoud be returned', async () => {
@@ -102,5 +102,5 @@ test('Given a Deck Building Menu deck source and positional rectangles with card
     let deckSource = new DeckBuildingMenuSource();
     let deck: Deck = await deckSource.getCurrentDeck();
 
-    expect(deck.cards.length).toEqual(17);
+    expect(deck.getCards().length).toEqual(17);
 });

@@ -6,9 +6,9 @@ import { DeckBuildingMenuSource } from './DeckBuildingMenuSource'
 
 export class Application {
 
-    private originalDeck: Deck = new Deck([]);
-    private modifiedDeck: Deck = new Deck([]);
-
+    private originalDeck: Deck = new Deck();
+    private modifiedDeck: Deck = new Deck();
+    
     private deckService: DeckService = new DeckService();
     private lorService: LoRService = new LoRService();
 

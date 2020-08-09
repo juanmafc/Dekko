@@ -1,4 +1,4 @@
-import { Deck, Card } from './Deck';
+import { Deck, Card, CardInDeck } from './Deck';
 import { LoRCardRepository } from './LoRCardRepository';
 import { PositionalRectangles, Rectangle } from './PositionalRectangles';
 import { LoRAPI } from './LoRAPI'
@@ -14,13 +14,16 @@ export class DeckBuildingMenuSource {
     
         const cardsRectangles:Rectangle[] = await this.getDeckCardsRectangles();
         
-        let cards: Card[] = cardsRectangles.map( (cardRectangle:Rectangle) => {
+        let cards: CardInDeck[] = cardsRectangles.map( (cardRectangle:Rectangle) => {
             let cardCode = cardRectangle.CardCode;
             let cardName = <string> codeToNameMap.get(cardRectangle.CardCode);
-            return new Card(cardCode, cardName);
+                        
+            return new CardInDeck(cardName, 1)
         });    
     
-        return new Deck(cards);
+        let deck = new Deck();
+        cards.forEach(card => deck.addCard(card));
+        return deck;
     }    
 
     private async getDeckCardsRectangles(): Promise<Rectangle[]> {
