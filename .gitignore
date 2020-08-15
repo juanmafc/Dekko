@@ -49,3 +49,4 @@ set2-lite-en_us.zip
 #Javascript
 js/*.js
 *.map
+.vscode/launch.json
