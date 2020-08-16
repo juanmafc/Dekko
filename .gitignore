@@ -19,6 +19,9 @@ public/css/main.css
 # Coverage reports
 coverage
 
+# Test reports
+jest_html_reporters.html
+
 # API keys and secrets
 .env
 
